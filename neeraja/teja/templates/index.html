@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>teachers details table</h1><hr/><hr/><br/><br/>
+<table border="2px">
+    <tr>
+        <th>name</th>
+        <th>address</th>
+        <th>phonenumber</th>
+    </tr>
+{% for i in studata %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.phonenumber}}</td>
+        <td>
+            <a href="/edit/{{i.name}}">Edit</a> &nbsp <a href="/delete/{{i.name}}">Delete</a>
+        </td>
+    </tr>
+{% endfor %}
+</table><br/><br/>
+<a href="/accounts/logout"><button type="button">logout</button></a><br/><br/>
+<a href="/kesavulu/"><button type="button">Create</button></a>
+</body>
+</html>
